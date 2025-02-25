@@ -1,8 +1,39 @@
-
 <template>
   <div class="container">
     <h1>My New Nuxt Page</h1>
     <p>Goodbye default sadness, hello custom happiness!</p>
+    
+    <!-- NuxtUI Components -->
+    <UCard class="my-4">
+      <template #header>
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">NuxtUI Card Example</h3>
+          <UBadge color="primary">New</UBadge>
+        </div>
+      </template>
+      <p>This is a card component from NuxtUI library.</p>
+      <template #footer>
+        <div class="flex justify-end gap-2">
+          <UButton color="gray" variant="ghost">Cancel</UButton>
+          <UButton color="primary">Submit</UButton>
+        </div>
+      </template>
+    </UCard>
+
+    <div class="flex flex-col gap-4 my-6">
+      <UAlert title="Information" color="blue" icon="i-heroicons-information-circle">
+        This is an informational alert from NuxtUI.
+      </UAlert>
+      
+      <UInput placeholder="Type something..." icon="i-heroicons-magnifying-glass" />
+      
+      <USelect
+        :options="['Option 1', 'Option 2', 'Option 3']"
+        placeholder="Select an option"
+      />
+      
+      <UToggle v-model="toggleState" />
+    </div>
     
     <!-- Example of using Nuxt's built-in components -->
     <NuxtLink to="/">Back to Home</NuxtLink>
@@ -11,6 +42,9 @@
 
 <script setup>
 // Your component logic goes here
+import { ref } from 'vue'
+
+const toggleState = ref(false)
 </script>
 
 <style scoped>
