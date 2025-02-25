@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>My New Nuxt Page</h1>
+    <h1>Flash Fluency</h1>
     <p>Goodbye default sadness, hello custom happiness!</p>
     
     <!-- NuxtUI Components -->
