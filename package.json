@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d .output/public"
   },
   "dependencies": {
+    "@nuxt/content": "^3.2.2",
     "@nuxt/ui": "^2.21.0",
     "nuxt": "^3.15.4",
     "vue": "latest",
